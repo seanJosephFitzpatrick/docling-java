@@ -16,7 +16,6 @@ class DoclingServeClientExceptionTests {
     assertThat(exception.getResponseBody()).isNull();
   }
 
-  //test signed commit
   @Test
   void constructWithNullCause() {
     var exception = new DoclingServeClientException((Throwable) null);

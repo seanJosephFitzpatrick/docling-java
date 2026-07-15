@@ -31,10 +31,8 @@ dependencies {
 }
 
 testing {
-  suites {
-    val test by getting(JvmTestSuite::class) {
-      useJUnitJupiter()
-    }
+  suites.withType<JvmTestSuite> {
+    useJUnitJupiter()
   }
 }
 

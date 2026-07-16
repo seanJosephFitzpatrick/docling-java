@@ -51,6 +51,7 @@ class DoclingServeClientExceptionTests {
   void constructWithStatusCodeAndNullResponseBody() {
     var exception = new DoclingServeClientException("not found", 404, null);
 
+    assertThat(exception.getMessage()).isEqualTo("not found");
     assertThat(exception.getStatusCode()).isEqualTo(404);
     assertThat(exception.getResponseBody()).isNull();
   }
